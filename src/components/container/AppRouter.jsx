@@ -6,6 +6,7 @@ import RegisterPage from "../../pages/RegisterPage"
 import ErrorPage from "../../pages/ErrorPage"
 import Navbar from './Navbar';
 import CreateGroupPage from '../../pages/CreateGroupPage';
+import AddMemberPage from '../../pages/AddMemberPage';
 
 const AppRouter = () => {
     return (
@@ -19,6 +20,7 @@ const AppRouter = () => {
                     <Route path='/register' element={<RegisterPage />} />
                     <Route path='/*' element={<ErrorPage />} />
                     <Route path='/create-group' element={<CreateGroupPage />} />
+                    <Route path='/add-member-group' element={<AddMemberPage />} />
                 </Routes>
             </BrowserRouter>
         </>

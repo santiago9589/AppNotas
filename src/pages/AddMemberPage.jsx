@@ -1,8 +1,9 @@
 import React from 'react'
+import AddMember from '../components/container/AddMember'
 
 const AddMemberPage = () => {
     return (
-        <div>AddMemberPage</div>
+        <AddMember/>
     )
 }
 

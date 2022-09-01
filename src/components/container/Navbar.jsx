@@ -31,6 +31,12 @@ const Navbar = () => {
                         </Link>
 
                     </li>
+                    <li>
+                        <Link to="/add-member-group">
+                            ADD MEMBER
+                        </Link>
+
+                    </li>
                 </ul>
             </nav>
 
