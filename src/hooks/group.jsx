@@ -1,10 +1,10 @@
 import { useState} from "react"
 
-export const useGroup = () => {
+export const useGroup = (nameInit,membersInit) => {
 
     const [group, setGroup] = useState({
-        name: "",
-        members: "",
+        name: nameInit || "",
+        members: membersInit || "",
     })
 
     const { name, members } = group

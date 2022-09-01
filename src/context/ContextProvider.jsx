@@ -16,9 +16,18 @@ export const ContextProvider = ({ children }) => {
         setData({...data,names:[...names,name]})
     }
 
+    const addDataAll = (newData) => {
+        setData(newData)
+    }
+
+    const deleteDataAll = () => {
+        setData({})
+    }
+
+
 
     return (
-        <ContextApp.Provider value={{ data, addData }}>
+        <ContextApp.Provider value={{ data, addData,addDataAll,deleteDataAll }}>
             {children}
         </ContextApp.Provider>
     )

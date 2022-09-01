@@ -1,8 +1,9 @@
 import React from 'react'
+import EditGroup from '../components/container/EditGroup'
 
 const EditGroupPage = () => {
     return (
-        <div>EditGroupPage</div>
+        <EditGroup/>
     )
 }
 

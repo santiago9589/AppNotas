@@ -35,8 +35,17 @@ const Navbar = () => {
                         <Link to="/add-member-group">
                             ADD MEMBER
                         </Link>
-
                     </li>
+                    <li>
+                        <Link to="/edit-group">
+                            EDIT GROUP
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/delete-group">
+                            DELETE GROUP
+                        </Link>
+                    </li> 
                 </ul>
             </nav>
 
