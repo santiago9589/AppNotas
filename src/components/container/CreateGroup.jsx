@@ -1,47 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { useGroup } from '../../hooks/group'
+import { useList } from '../../hooks/listofPeople'
 
 export const CreateGroup = () => {
 
-    const [group, setGroup] = useState({
-        name: "",
-        members: "",
-    })
-
-
-    const [list, setList] = useState({})
-
+    const {name,members,handleChange} = useGroup()
+    const {names,handleChangeNames} = useList(members)
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log([group,list])
+        let finalResult = {name,members,names}
+        console.log(finalResult)
     }
-
-    const handleChange = (e) => {
-        e.preventDefault()
-        let { name, value } = e.target
-        setGroup({ ...group, [name]: value })
-    }
-
-    const handleChangeNames = (e) => {
-        e.preventDefault()
-        let { name, value } = e.target
-        setList({ ...list, [name]: value })
-    }
-
-    const { name, members } = group
-
-    const change = (number) => {
-        setList({})
-        for (let i = 0; i < parseInt(number); i++) {
-            setList({ ...list, [number]: "" })
-        }
-    }
-
-    useEffect(() => {
-        change(members)
-    }, [members])
-
-    let valores = Object.values(list)
 
     return (
         <form onSubmit={handleSubmit}>
@@ -61,7 +31,7 @@ export const CreateGroup = () => {
             />
             {/* SE MANEJA CON EL ESTADO GLOBAL {errors.email && touched.email && (<div>{errors.email}</div>)} */}
             {
-                valores.map((element, index) => {
+                names.map((element, index) => {
                     return (
                         <div key={index + 1}>
                             <label htmlFor={index + 1}>number of members</label>

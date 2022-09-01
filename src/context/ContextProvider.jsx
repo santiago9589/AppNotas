@@ -5,18 +5,20 @@ import React, { useState } from 'react'
 
 export const ContextProvider = ({ children }) => {
 
-    const [data,setData] = useState([
-        {name:1,members:2},
-        {1:"juan",2:"pedro"}
-    ])
+    const [data, setData] = useState({
+        members: "2",
+        name: "ddfsdfd",
+        names: ['sfsdf', 'sdfsd']
+    })
 
-    const addData = (name)=>{
-        setData(arr => [arr[0],arr[1]={...arr[1],name}])
+    const addData = (name) => {
+        let {names} = data
+        setData({...data,names:[...names,name]})
     }
 
 
     return (
-        <ContextApp.Provider value={{data,addData}}>
+        <ContextApp.Provider value={{ data, addData }}>
             {children}
         </ContextApp.Provider>
     )
