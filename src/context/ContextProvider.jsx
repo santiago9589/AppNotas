@@ -1,15 +1,26 @@
 import { ContextApp } from "./context";
-
-
 import React, { useState } from 'react'
 
 export const ContextProvider = ({ children }) => {
 
-    const [data, setData] = useState({
+    
+    const [data, setData] = useState([
+        
+        {
         members: "2",
         name: "ddfsdfd",
         names: ['sfsdf', 'sdfsd']
-    })
+        },
+
+        {
+            members: "2",
+            name: "ddfsdfd",
+            names: ['sfsdf', 'sdfsd']
+        }
+
+])
+
+const [userRegister, setUserRegister] = useState(false)
 
     const addData = (name) => {
         let {names} = data
@@ -27,7 +38,7 @@ export const ContextProvider = ({ children }) => {
 
 
     return (
-        <ContextApp.Provider value={{ data, addData,addDataAll,deleteDataAll }}>
+        <ContextApp.Provider value={{ data, addData,addDataAll,deleteDataAll,userRegister,setUserRegister }}>
             {children}
         </ContextApp.Provider>
     )

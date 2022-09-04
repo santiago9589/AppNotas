@@ -31,7 +31,7 @@ const Navbar = () => {
                         </Link>
 
                     </li>
-                    <li>
+                    {/* <li>
                         <Link to="/add-member-group">
                             ADD MEMBER
                         </Link>
@@ -45,7 +45,12 @@ const Navbar = () => {
                         <Link to="/delete-group">
                             DELETE GROUP
                         </Link>
-                    </li> 
+                    </li>
+                    <li>
+                        <Link to="/list-group">
+                            LIST GROUP
+                        </Link>
+                    </li> */}
                 </ul>
             </nav>
 

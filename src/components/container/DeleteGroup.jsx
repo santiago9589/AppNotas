@@ -5,7 +5,6 @@ export const DeleteGroup = () => {
 
     const { data, deleteDataAll } = useContext(ContextApp)
 
-    console.log(data)
     return (
         <>
             <div>Do you want to delete the group {data.name}?</div>

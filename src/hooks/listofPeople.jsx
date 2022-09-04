@@ -17,6 +17,7 @@ export const useList = (members) => {
 
     const handleChangeNames = (e) => {
         e.preventDefault()
+        if(!e.target.value) return
         let { name, value } = e.target
         setList({ ...list, [name]: value })
     }

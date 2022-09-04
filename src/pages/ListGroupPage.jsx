@@ -1,8 +1,9 @@
 import React from 'react'
+import ListGroup from '../components/container/ListGroup';
 
 const ListGroupPage = () => {
     return (
-        <div>ListGroupPage</div>
+        <ListGroup/>
     )
 }
 
