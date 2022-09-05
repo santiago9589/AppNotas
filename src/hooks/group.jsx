@@ -4,7 +4,7 @@ export const useGroup = (nameInit,membersInit) => {
 
     const [group, setGroup] = useState({
         name: nameInit || "",
-        members: membersInit || "",
+        members: membersInit || 0,
     })
 
     const { name, members } = group
@@ -15,5 +15,10 @@ export const useGroup = (nameInit,membersInit) => {
         setGroup({ ...group, [name]: value })
     }
 
-    return {name,members,handleChange,group}
+    const handleMembers= (e) => {
+        e.preventDefault()
+        setGroup({ ...group, members: members+1})
+    }
+
+    return {name,members,handleChange,group,handleMembers}
 }

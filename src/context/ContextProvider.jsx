@@ -7,13 +7,13 @@ export const ContextProvider = ({ children }) => {
     const [data, setData] = useState([
         
         {
-        members: "2",
+        members: 2,
         name: "ddfsdfd",
         names: ['sfsdf', 'sdfsd']
         },
 
         {
-            members: "2",
+            members: 2,
             name: "ddfsdfd",
             names: ['sfsdf', 'sdfsd']
         }
@@ -24,7 +24,7 @@ const [userRegister, setUserRegister] = useState(false)
 
     const addData = (name) => {
         let {names} = data
-        setData({...data,names:[...names,name]})
+        setData(data=>{data[0].names = [...names,name]})
     }
 
     const addDataAll = (newData) => {
