@@ -14,7 +14,7 @@ export const CreateGroup = () => {
     }
 
     return (
-        <form className="form-our" onSubmit={handleSubmit}>
+        <form className="form-our-activity" onSubmit={handleSubmit}>
             <div className='form-component'>
                 <label htmlFor='name' className='form-component-label' >Name</label>
                 <input

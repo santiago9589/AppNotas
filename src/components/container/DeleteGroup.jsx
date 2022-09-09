@@ -10,11 +10,11 @@ export const DeleteGroup = () => {
 
     return (
 
-        <div className='flex flex-col space-y-4 items-center justify-center p-4 w-full bg-white m-6  rounded-lg shadow-lg shadow-gray-400'>
+        <div className='flex flex-col space-y-4 items-center justify-center p-4 w-3/5 bg-white m-4  rounded-lg shadow-lg shadow-gray-400 sm:w-1/2'>
             <div className='text-lg text-red-500 font-semibold italic'>Do you want to delete the group {data.name}?</div>
 
-            <div className='btn-container'>
-                <div className=' btn-container-delete'>
+            <div className='flex flex-col w-1/2 sm:w-1/5'>
+                <div className=' btn-container-delete '>
                     <button>Confirm
                     </button>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">

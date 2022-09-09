@@ -21,18 +21,18 @@ const AppRouter = () => {
             <BrowserRouter>
                 {userRegister ? <Navbar /> : null}
                 <Routes>
-                    <Route path='/' element={<HomePage />} />
-                    <Route path='/login' element={<LoginPage />} />
-                    <Route path='/register' element={<RegisterPage />} />
+                    <Route path='/' element={userRegister ? <HomePage /> : <LoginPage />} />
+                    <Route path='/login' element={!userRegister ? <LoginPage /> : <HomePage />} />
+                    <Route path='/register' element={!userRegister ? <RegisterPage /> : <HomePage />} />
                     <Route path='/*' element={<ErrorPage />} />
-                    <Route path='/create-group' element={<CreateGroupPage />} />
-                    <Route path='/add-member-group' element={<AddMemberPage />} />
+                    <Route path='/create-group' element={userRegister ? <CreateGroupPage /> : <LoginPage />} />
+                    <Route path='/add-member-group' element={userRegister ? <AddMemberPage /> : <LoginPage />} />
 
-                    <Route path='/edit-group' element={<EditGroupPage />} />
-                    <Route path='/delete-group' element={<DeleteGroup />} />
-                     
-                    <Route path='/list-group' element={<ListGroup />} />
-                   
+                    <Route path='/edit-group' element={userRegister ? <EditGroupPage /> : <LoginPage />} />
+                    <Route path='/delete-group' element={userRegister ? <DeleteGroup /> : <LoginPage />} />
+
+                    <Route path='/list-group' element={userRegister ? <ListGroup /> : <LoginPage />} />
+
                 </Routes>
             </BrowserRouter>
         </>

@@ -30,7 +30,7 @@ const Login = () => {
     })
 
     const { handleChange, handleSubmit, handleReset, handleBlur,values, errors, touched } = formik
-    console.log()
+    
     return (
         <form className="form-our" onSubmit={handleSubmit}>
             <div className='form-component'>

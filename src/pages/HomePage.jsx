@@ -1,11 +1,11 @@
 import React from 'react'
+import Home from '../components/container/Home';
 
 const HomePage = () => {
-    return (
-        <h1 className="text-red-500">
-        Hello world!
-      </h1>
-    )
+  return (
+
+    <Home />
+  )
 }
 
 export default HomePage;

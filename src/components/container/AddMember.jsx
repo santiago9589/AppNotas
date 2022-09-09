@@ -25,7 +25,7 @@ const AddMember = () => {
   console.log(name)
 
   return (
-    <form onSubmit={handleSubmit} className="form-our">
+    <form onSubmit={handleSubmit} className="form-our-activity">
       <label htmlFor='name' className='form-component-label'>New Member</label>
       <input
         name='name'

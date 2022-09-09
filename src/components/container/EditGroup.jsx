@@ -18,7 +18,7 @@ const EditGroup = () => {
         addDataAll(finalResult)
     }
     return (
-        <form onSubmit={handleSubmit} className='form-our'>
+        <form onSubmit={handleSubmit} className='form-our-activity'>
             <label htmlFor='name' className='form-component-label' >Name</label>
             <input
                 name='name'

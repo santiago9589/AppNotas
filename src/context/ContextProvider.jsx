@@ -20,7 +20,7 @@ export const ContextProvider = ({ children }) => {
 
 ])
 
-const [userRegister, setUserRegister] = useState(false)
+const [userRegister, setUserRegister] = useState(true)
 
     const addData = (name) => {
         let {names} = data
